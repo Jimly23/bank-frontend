@@ -87,9 +87,9 @@ const Antri = () => {
       <Navbar />
       <div className="bg-slate-50 pt-20 h-screen">
         <div className="max-w-[1300px] px-8 mx-auto py-[60px]">
-          <img src={logo} className="w-[200px] mx-auto" />
+          <img src={logo} className="w-[100px] lg:w-[200px] mx-auto" />
           {isAntri?
-            <div className='w-[700px] mx-auto rounded-lg bg-white shadow mt-10 p-5'>
+            <div className='lg:w-[700px] mx-auto rounded-lg bg-white shadow mt-10 p-5'>
               <div className='text-center'>
                 <h5 className='font-medium text-xl'>Nomor Antrian Anda</h5>
                 <h1 className='fotn-medium text-[100px]'>{myQueue}</h1>
@@ -101,15 +101,15 @@ const Antri = () => {
               </div>
             </div>
             :       
-            <div className='w-[700px] mx-auto rounded-lg bg-white shadow mt-10 grid grid-cols-2 gap-2 p-5'>
-              <div className="rounded-md bg-orange-100 w-full h-[100px] flex items-center gap-x-3 p-5">
+            <div className='lg:w-[700px] mx-auto rounded-lg bg-white shadow mt-10 grid grid-cols-2 gap-2 p-5'>
+              <div className="col-span-2 sm:col-span-1 rounded-md bg-orange-100 w-full h-[100px] flex items-center gap-x-3 p-5">
                   <HiMiniUserGroup className="text-orange-500" size={50}/>
                   <div className="font-medium">
                       <h5 className="text-lg">Jumlah Antrian</h5>
                       <p>{allQueue}</p>
                   </div>
               </div>
-              <div className="rounded-md bg-orange-100 w-full h-[100px] flex items-center gap-x-3 p-5">
+              <div className="col-span-2 sm:col-span-1 rounded-md bg-orange-100 w-full h-[100px] flex items-center gap-x-3 p-5">
                   <HiMiniUser className="text-orange-500" size={50}/>
                   <div className="font-medium">
                       <h5 className="text-lg">Antrian Saat Ini</h5>
@@ -122,7 +122,7 @@ const Antri = () => {
                 <div className="rounded-md col-span-2 bg-orange-50 border border-orange-200 w-full p-2 text-sm">Untuk Anda yang sudah mengambil nomor antrian, harap datang 10-15 menit sebelum giliran Anda dilayani!</div>
               </div>
 
-              <div onClick={handleSetAntri} className='col-span-2 pt-5'>
+              <div onClick={handleSetAntri} className='col-span-2 pt-5 flex justify-center'>
                 <Button  text={"Ambil Nomor Antrian"} style={'py-3'}/>
               </div>
             </div>
