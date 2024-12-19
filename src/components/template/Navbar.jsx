@@ -18,12 +18,14 @@ const Navbar = () => {
     const token = Cookies.get('authToken');
     if (token !== undefined) {
       const data = JSON.parse(token);
-      setIsLogin(false);
-      setCookie(token);
-      if (data.email === "admin@gmail.com") {
+      const { email } = data;
+      if (email === "admin@gmail.com") {
         setIsAdmin(true);
-      } else if (data.email === "kasir@gmail.com") {
+      } else if (email === "kasir@gmail.com") {
         setIsKasir(true);
+      } else {
+        setIsLogin(false);
+        setCookie(token);
       }
     }
   }
