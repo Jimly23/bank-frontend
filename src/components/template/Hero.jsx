@@ -42,13 +42,13 @@ const Hero = () => {
             <div className="relative max-w-[400px] mx-auto">
               <img
                 src={logo}
-                className="ms-24 w-[250px] lg:w-[200px] ngambang2 rounded-lg"
+                className="ms-24 w-[0] lg:w-[200px] rounded-lg"
               />
             </div>
           </div>
 
         </div>
-        <div className="grid grid-cols-3 gap-x-10 py-10">
+        <div className="grid md:grid-cols-3 gap-10 py-10">
             <div className="rounded-md bg-blue-100 w-full h-[100px] flex items-center gap-x-3 p-5">
                 <FaRegClock className="text-blue-500" size={50}/>
                 <div className="font-medium">

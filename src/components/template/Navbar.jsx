@@ -44,7 +44,7 @@ const Navbar = () => {
   
   return (
     <div className="fixed left-0 right-0 top-0 bg-white z-10 px-8">
-      <div className="max-w-[1300px] px-8 mx-auto flex justify-between items-center py-4">
+      <div className="max-w-[1300px] md:px-8 mx-auto flex justify-between items-center py-4">
         <img src={logo} className="w-[100px]" />
         <nav className="hidden md:flex items-center gap-x-5 text-md font-medium text-slate-600">
           <Link to={"/"}>Beranda</Link>
@@ -52,7 +52,7 @@ const Navbar = () => {
           {isAdmin && <Link to={"/admin"}>Admin</Link>}
           {isKasir && <Link to={"/kasir"}>Kasir</Link>}
         </nav>
-        <div className="hidden md:block">
+        <div className="">
           {isLogin? 
             <Link to={"/login"}>
               <Button text={"Login"}/>
