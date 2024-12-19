@@ -16,8 +16,9 @@ const Navbar = () => {
 
   const getAuthToken = () => {
     const token = Cookies.get('authToken');
+    const admin = Cookies.get('admin');
     if (token !== undefined) {
-      const data = JSON.parse(token);
+      const data = JSON.parse(admin);
       const { email } = data;
       if (email === "admin@gmail.com") {
         setIsAdmin(true);
@@ -36,6 +37,7 @@ const Navbar = () => {
 
   const logout = () => {
     Cookies.remove('authToken');
+    Cookies.remove('admin');
     setCookie(null);
     setIsLogin(true);
     setIsKasir(false);

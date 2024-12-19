@@ -27,7 +27,8 @@ const Login = () => {
       if(response.status === 200){
         
         const { _id, email } = response.data;
-        Cookies.set('authToken', JSON.stringify({ _id, email }), { expires: 7, secure: true, sameSite: 'Strict' });
+        Cookies.set('authToken', _id, { expires: 7, secure: true, sameSite: 'Strict' });
+        Cookies.set('admin', JSON.stringify({ _id, email }), { expires: 7, secure: true, sameSite: 'Strict' });
         
         navigate("/");
       } else {

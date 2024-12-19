@@ -8,11 +8,6 @@ import yopi from './../../assets/images/yopi.jpg'
 const ListMenu = () => {
     const menu = [
       {
-        img: andhika,
-        desc: "Andhika Prasetyo",
-        price: "23SA21A092"
-      },
-      {
         img: dea,
         desc: "Dea Bella Sarmila",
         price: "23SA21A105"
@@ -38,7 +33,13 @@ const ListMenu = () => {
     <div className='bg-gradient-to-b from-slate-100 to-white py-10'>
       <div className='max-w-[1300px] px-8 mx-auto'>
         <h3 className='font-medium text-3xl my-5 text-center mb-20'>Tentang Kami</h3>
-        <div className='grid sm:grid-cols-3 lg:grid-cols-5 gap-4 gap-y-10 pt-16 pb-24'>
+        <div className='text-center'>
+            <h5 className='font-medium text-lg mb-3'>Ketua</h5>
+            <div className='w-[150px] h-[150px] bg-blue-700 rounded-md mx-auto overflow-hidden'><img src={andhika} className='h-full w-full object-cover' alt="" /></div>
+            <h5 className='font-medium text-lg'>Andhika Prasetyo</h5>
+            <p>23SA21A092</p>
+        </div>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4 gap-y-10 pt-16 pb-24'>
             {menu.map((item,index) => (
                 <div key={index} className='text-center'>
                     <div className='w-[150px] h-[150px] bg-blue-700 rounded-md mx-auto overflow-hidden'><img src={item.img} className='h-full w-full object-cover' alt="" /></div>
