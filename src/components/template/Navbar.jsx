@@ -21,8 +21,12 @@ const Navbar = () => {
       const { email } = data;
       if (email === "admin@gmail.com") {
         setIsAdmin(true);
+        setIsLogin(false);
+        setCookie(token);
       } else if (email === "kasir@gmail.com") {
         setIsKasir(true);
+        setIsLogin(false);
+        setCookie(token);
       } else {
         setIsLogin(false);
         setCookie(token);
