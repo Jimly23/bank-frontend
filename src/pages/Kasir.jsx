@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HiMiniUser, HiMiniUserGroup } from "react-icons/hi2";
 import Button from "../components/atoms/Button";
-import logo from "./../assets/images/logo.png"
+import logo from "./../assets/images/logo-bank.png"
 import { getQueues, updateQueueStatus } from "../api/queueApi";
 
 const Kasir = () => {
@@ -59,7 +59,7 @@ const Kasir = () => {
               </div>
           </div>
 
-          <div onClick={handleUpdateStatus} className='col-span-3 pt-5'>
+          <div onClick={handleUpdateStatus} className='col-span-3 pt-5 flex justify-center'>
             <Button  text={"Berikutnya"} style={'py-5'}/>
           </div>
         </div>

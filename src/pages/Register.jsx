@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Button from '../components/atoms/Button'
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/logo-bank.png'
 import { register } from '../api/userApi'
 import { useNavigate } from 'react-router-dom'
 
@@ -38,7 +38,7 @@ const Register = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 z-50 fixed left-0 right-0 bottom-0 top-0">
       <div className="bg-white p-8 rounded-lg shadow-xl w-96">
-        <img src={logo} className='w-[200px] mx-auto pb-5' />
+        <img src={logo} className='w-[150px] mx-auto pb-5' />
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="block text-gray-700 text-sm font-medium mb-2">

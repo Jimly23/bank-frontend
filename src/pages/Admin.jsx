@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Button from '../components/atoms/Button'
+import logo from '../assets/images/logo-bank.png'
 import { FaRegClock } from 'react-icons/fa6';
 import { FaRegCheckCircle } from 'react-icons/fa';
 import { HiMiniUser, HiMiniUserGroup } from 'react-icons/hi2';
@@ -39,8 +40,8 @@ const Admin = () => {
   return (
     <>
         <div className='grid grid-cols-6'>
-            <div className='col-span-1 sidebar h-screen bg-blue-900'>
-                <h3 className='font-medium text-xl text-white p-5'>Admin Gacoan</h3>
+            <div className='col-span-1 sidebar h-screen bg-orange-500'>
+                <h3 className='font-medium text-xl text-white p-5'>iBank</h3>
                 <ul className='mt-3 font-medium'>
                     <li onClick={()=>setIsOpen(1)} className='text-white hover:bg-slate-500 cursor-pointer py-3 px-4'>Daftar Antrian</li>
                     <li onClick={()=>setIsOpen(2)} className='text-white hover:bg-slate-500 cursor-pointer py-3 px-4'>Riwayat Antrian</li>

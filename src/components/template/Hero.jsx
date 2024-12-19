@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import banner from "../../assets/images/baner.png";
-import logo from "../../assets/images/logo.png";
+import logo from "../../assets/images/logo-bank.png";
 import Button from "../atoms/Button";
 import { FaRegClock } from "react-icons/fa6";
 import { HiMiniUser, HiMiniUserGroup } from "react-icons/hi2";
@@ -28,12 +28,10 @@ const Hero = () => {
         <div className="grid md:grid-cols-2 gap-y-10 lg:gap-x-5 flex items-center py-20">
           <div className="relative">
             <h4 className="text-4xl font-medium">
-              Antri Gacoan Lebih <br /> Efisien Menggunakan Gantri
+              Antri di Bank Lebih <br /> Efisien Menggunakan iBank
             </h4>
             <p className="my-5 text-gray-500">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              modi voluptatibus ratione perferendis tempora, quaerat dolorum aut
-              neque aspernatur ullam.
+            Hemat waktu dan nikmati kenyamanan antrian yang lebih teratur dengan iBank. Dengan teknologi pintar, iBank memudahkan Anda untuk mengelola waktu antrian di bank, sehingga Anda bisa lebih fokus pada keperluan lain tanpa harus menunggu lama.
             </p>
             <div className="cta-box w-[150px]">
                 <Link to={'/antri'}><Button text={"Antri Sekarang"}/></Link>
@@ -44,28 +42,8 @@ const Hero = () => {
             <div className="relative max-w-[400px] mx-auto">
               <img
                 src={logo}
-                className="ms-4 w-[150px] lg:w-[170px] ngambang1 rounded-lg"
+                className="ms-24 w-[250px] lg:w-[200px] ngambang2 rounded-lg"
               />
-              <img
-                src={logo}
-                className="ms-16 mt-5 w-[180px] lg:w-[200px] ngambang2 rounded-lg"
-              />
-              <div className="absolute right-0 top-0">
-                <img
-                  src={logo}
-                  className="w-[200px] lg:w-[220px] ngambang3 rounded-lg"
-                />
-              </div>
-              <div className="absolute right-0 top-0">
-                <img src={logo} className="w-[30px] ngambang3 putar" />
-              </div>
-              <div className="absolute -left-10 top-[50px]">
-                <img src={logo} className="w-[30px] ngambang3 putar" />
-              </div>
-              <div className="absolute left-[-100px] bottom-[0] flex items-center gap-x-[400px]">
-                <img src={logo} className="w-[15px] rounded-lg" />
-                <img src={logo} className="w-[15px] rounded-lg" />
-              </div>
             </div>
           </div>
 

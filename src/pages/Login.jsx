@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Button from '../components/atoms/Button'
 import Cookies from 'js-cookie'
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/logo-bank.png'
 import { Link, useNavigate } from 'react-router-dom'
 import { login } from '../api/userApi'
 
@@ -26,8 +26,8 @@ const Login = () => {
   
       if(response.status === 200){
         
-        const { _id } = response.data;
-        Cookies.set('authToken', _id, { expires: 7, secure: true, sameSite: 'Strict' });
+        const { _id, email } = response.data;
+        Cookies.set('authToken', { _id, email }, { expires: 7, secure: true, sameSite: 'Strict' });
         
         navigate("/");
       } else {
@@ -43,7 +43,7 @@ const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 z-50 fixed left-0 right-0 bottom-0 top-0">
       <div className="bg-white p-8 rounded-lg shadow-xl w-96">
-        <img src={logo} className='w-[200px] mx-auto pb-5' />
+        <img src={logo} className='w-[150px] mx-auto pb-5' />
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-medium mb-2" htmlFor="email">

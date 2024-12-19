@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Cookies from 'js-cookie'
 import Navbar from '../components/template/Navbar'
-import logo from './../assets/images/logo.png'
+import logo from './../assets/images/logo-bank.png'
 import { HiMiniUser, HiMiniUserGroup } from 'react-icons/hi2'
 import Button from '../components/atoms/Button'
 import { useNavigate } from 'react-router-dom'
