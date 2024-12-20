@@ -24,7 +24,7 @@ const Navbar = () => {
         setIsAdmin(true);
         setIsLogin(false);
         setCookie(token);
-      } else if (email === "kasir@gmail.com") {
+      } else if (email === "kasir@gmail.com" || email === "kasir2@gmail.com") {
         setIsKasir(true);
         setIsLogin(false);
         setCookie(token);
